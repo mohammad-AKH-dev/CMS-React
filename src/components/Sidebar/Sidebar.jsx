@@ -4,7 +4,7 @@ import { BiCommentDetail } from "react-icons/bi";
 import { FiUsers } from "react-icons/fi";
 import { IoBagCheckOutline } from "react-icons/io5";
 import {BsCurrencyDollar} from 'react-icons/bs'
-
+import { NavLink} from "react-router-dom";
 
 import "./Sidebar.css";
 
@@ -14,46 +14,46 @@ export default function Sidebar() {
       <h1 className="sidebar-title">به داشبورد خود خوش آمدید</h1>
 
       <ul className="sidebar-links">
-        <li className="active">
-          <a href="#">
+        <li className="">
+          <NavLink to={'/'}>
             <AiOutlineHome className='icon'/>
             صفحه اصلی
-            </a>
+            </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to={'/products'}>
             <MdProductionQuantityLimits className='icon'/>
             محصولات
-            </a>
+            </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to={'/comments'}>
             <BiCommentDetail className='icon'/>
             کامنت ها
-            </a>
+            </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to={'/users'}>
             <FiUsers className='icon'/>
             کاربران
-            </a>
+            </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to={'/orders'}>
             <IoBagCheckOutline className='icon'/>
             سفارشات
-            </a>
+            </NavLink>
         </li>
 
         <li>
-          <a href="#">
+          <NavLink to={'/offs'}>
             <BsCurrencyDollar className='icon'/>
             تخفیف ها
-            </a>
+            </NavLink>
         </li>
       </ul>
     </div>
