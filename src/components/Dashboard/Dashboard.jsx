@@ -1,9 +1,10 @@
+import ErrorBox from "../ErrorBox/ErrorBox";
 
 
 export default function Dashboard() {
   return (
     <div>
-      Dashboard
+      <ErrorBox message={'هیچ محصولی یافت نشد'}/>
     </div>
   )
 }
