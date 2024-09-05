@@ -1,0 +1,50 @@
+.modal-parent{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.modal-parent.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.delete-modal {
+    background-color: var(--white);
+    padding: 50px;
+    text-align: center;
+}
+
+.delete-modal h1 {
+    font-size: 2rem;
+}
+
+.delete-modal-buttons{
+    display: flex;
+    column-gap: 20px;
+}
+
+.delete-btn{
+    width: 100%;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    padding: 20px 0;
+    border: none;
+    outline: none;
+}
+
+.delete-modal-accept__btn{
+    color: var(--white);
+    background-color: var(--blue);
+    width: 100%;
+}
