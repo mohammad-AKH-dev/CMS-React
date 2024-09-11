@@ -20,16 +20,30 @@
 }
 
 .cms-table{
-    margin-top: 20px;
-    width: 100%;
-    border-radius: 10px;
-    background-color: var(--white);
+    margin-top: 20px !important;
+    width: 100% !important;
+    border-radius: 10px !important;
+    background-color: var(--white) !important;
 }
 
 .cms-table tr {
-    text-align: center;
+    text-align: center !important;
 }
 
 .cms-table th , .cms-table td{
-    padding: 20px;
+    padding: 20px !important;
+}
+
+.cms-main{
+    margin-top: 60px !important;
+    padding: 20px !important;
+    border-radius: 25px !important;
+
+}
+
+.custom-td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }

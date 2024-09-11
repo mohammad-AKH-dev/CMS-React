@@ -1,0 +1,10 @@
+.show-comment__btn {
+    font-size: 1.1rem;
+    width: 135px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
+

@@ -3,6 +3,7 @@ import {BrowserRouter} from 'react-router-dom'
 import App from './App.jsx'
 import './css/custom.css'
 import './css/cms.css'
+import 'bootstrap/dist/css/bootstrap.css'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>

@@ -6,11 +6,11 @@ import ErrorBox from "../ErrorBox/ErrorBox";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 
 import "./ProductsTable.css";
-export default function ProductsTable() {
+
+export default function ProductsTable({allProducts,getAllProducts}) {
   const [isShowDeleteModal, setIsShowDeleteModal] = useState(false);
   const [isShowDetailsModal, setIsShowDetailsModal] = useState(false);
   const [isShowEditModal, setIsShowEditModal] = useState(false);
-  const [allProducts, setAllProducts] = useState([]);
   const [mainProductDetail, setMainProductDetail] = useState({});
   const [mainProductId, setMainProductId] = useState(0);
   const [prevTitle, setPrevTitle] = useState(null);
@@ -21,21 +21,8 @@ export default function ProductsTable() {
   const [prevSale, setPrevSale] = useState(null);
   const [prevColors, setPrevColors] = useState(null);
 
-  async function getAllProducts() {
-    const res = await fetch("http://localhost:3000/api/products", {
-      method: "GET",
-    });
-    console.log(res);
-    const products = await res.json();
-    if (products.length) {
-      setAllProducts(products);
-      console.log(allProducts);
-    }
-  }
 
-  useEffect(() => {
-    getAllProducts();
-  }, []);
+  
 
   async function deleteModalSubmitAction() {
     const res = await fetch(
@@ -46,9 +33,13 @@ export default function ProductsTable() {
     );
     if (res.ok) {
       setIsShowDeleteModal(false);
-      getAllProducts();
+      getAllProducts()
     }
   }
+
+  useEffect(()=> {
+       getAllProducts()
+  },[])
 
   function deleteModalCancelAction() {
     setIsShowDeleteModal(false);
@@ -114,7 +105,7 @@ export default function ProductsTable() {
 
         <tbody>
           {allProducts.length ? (
-            allProducts.map((product) => (
+            [...allProducts].reverse().map((product) => (
               <tr key={product.id} className="products-table-tr">
                 <td>
                   <img
@@ -302,3 +293,11 @@ export default function ProductsTable() {
     </>
   );
 }
+
+
+
+
+// ProductsTable.propTypes = {
+//   allProducts: [],
+//   getAllProducts: function
+// }

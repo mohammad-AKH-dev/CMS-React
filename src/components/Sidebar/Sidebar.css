@@ -6,7 +6,7 @@
 }
 
 .sidebar-title{
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
     color: var(--white);
     padding: 15px;
     text-align: right;
@@ -14,21 +14,22 @@
 }
 
 .sidebar-links{
-    margin-top: 20px;
+    margin-top: 20px !important;
+    padding-left: 0 !important;
 }
 
 .sidebar-links li {
-    position: relative;
+    position: relative !important;
 }
 
 .sidebar-links li a {
-    color: var(--white);
-    text-decoration: none;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    font-size: 1.3rem;
-    padding: 15px;
+    color: var(--white) !important;
+    text-decoration: none !important;
+    display: flex !important;
+    justify-content: right !important;
+    align-items: center !important;
+    font-size: 1.3rem !important;
+    padding: 15px !important;
 }
 
 .sidebar-links li.active {
@@ -40,9 +41,9 @@
 }
 
 .sidebar-links li:first-child{
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 .icon {
-    margin-left: 8px;
+    margin-left: 8px !important;
 }
