@@ -163,6 +163,7 @@ export default function ProductsTable({allProducts,getAllProducts}) {
       </table>
       {isShowDeleteModal ? (
         <DeleteModal
+          title={'آیا از حذف اطمینان دارید؟'}
           submit={deleteModalSubmitAction}
           cancel={deleteModalCancelAction}
         />
